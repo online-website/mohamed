@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        line-height: 1;
+        color: #555;
+        font-family: system-ui;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(download.jpg);
+        background-size: auto;
+        background-repeat: repeat;
+        flex-direction: column;
+      }
+
+      @keyframes image {
+        0% {
+          transform: translateY(0);
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+          -webkit-transform: translateY(10px);
+          -moz-transform: translateY(10px);
+          -ms-transform: translateY(10px);
+          -o-transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(20px);
+          -webkit-transform: translateY(20px);
+          -moz-transform: translateY(20px);
+          -ms-transform: translateY(20px);
+          -o-transform: translateY(20px);
+        }
+      }
+
+      .image {
+        background-image: url(/person.jpg);
+        height: 65vh;
+        width: 90vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        animation-name: image;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+      }
+
+      .name {
+        font-size: 30px;
+        font-weight: bold;
+        color: #222;
+        margin-top: 50px;
+      }
+      .number {
+        font-size: 25px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image"></div>
+    <p class="name">Hi, My name is yehia Eljin.</p>
+
+    <p class="name">: للتعارف الجاد فقط</p>
+    <p class="number">01003685977</p>
+  </body>
+</html>
