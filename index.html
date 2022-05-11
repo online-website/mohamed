@@ -1,1 +1,594 @@
 x
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content="Mohamed Tamer" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/Chq23Vb/IMG-20220505-WA0018.jpg"
+    />
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+    <meta
+      property="og:description"
+      content="The most handsome person in the earth"
+    />
+    <meta
+      property="og:url"
+      content="https://online-website.github.io//mohamed-tamer"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+    <meta property="og:type" content="website" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Mohamed Tamer</title>
+    <style>
+      /********************************************************/
+      /*                  global rules                       */
+      /******************************************************/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1;
+        font-weight: 400;
+        font-family: "Rubik", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /********************************************************/
+      /*                  Navigation bar                     */
+      /******************************************************/
+      header {
+        height: 70px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #767676;
+        transition: all 0.3s;
+      }
+
+      .nav-link:hover,
+      .nav-link:active {
+        color: #ff1493;
+      }
+
+      .social-icon {
+        height: 24px;
+        width: 24px;
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+      /********************************************************/
+      /*                 Hero section                        */
+      /******************************************************/
+      .hero {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        color: #555;
+      }
+      .hero-hi {
+        font-size: 20px;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: deeppink;
+      }
+      .hero-name {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      .hero-job {
+        font-style: italic;
+        margin-bottom: 96px;
+      }
+      .hero-btn {
+        padding: 12px 24px;
+        border: 1px solid deeppink;
+        color: deeppink;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 0 16px rgba(255, 20, 145, 0.5);
+      }
+      .hero-btn:hover {
+        color: #fff;
+        background-color: deeppink;
+      }
+      /********************************************************/
+      /*                  About section                      */
+      /******************************************************/
+      .about {
+        height: 80vh;
+        width: 100vw;
+        background-image: linear-gradient(to bottom, #ef32d9, #333399);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        position: relative;
+      }
+      @keyframes up-down {
+        100% {
+          transform: translateY(10px);
+        }
+      }
+
+      /* responsive */
+      @media (max-width: 991px) {
+        .about .about-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+        }
+        .about img {
+          max-width: 100%;
+        }
+        .about .about-container .text {
+          font-size: 1.9rem;
+        }
+      }
+
+      /* add the line  */
+
+      .about::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        background-color: #333399;
+        bottom: -66px;
+        left: 0px;
+        z-index: -1;
+        transform: skewY(356deg);
+      }
+
+      @media (max-width: 1100px) {
+        .about::after {
+          bottom: -140px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .about::after {
+          bottom: -60px;
+          transform: skewY(354deg);
+        }
+      }
+      .about .img-box img {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        border-radius: 10px;
+        animation-name: up-down;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.35);
+      }
+      .about-txt {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      .about-txt .wrap-txt {
+        font-weight: 600;
+        color: #ddd;
+        margin-right: 5px;
+      }
+
+      .heart {
+        height: 24px;
+        width: 24px;
+        transform: translateX(5px);
+        transform: translateY(7px);
+        color: red;
+      }
+      .magnet {
+        height: 24px;
+        width: 24px;
+        transform: translateX(5px);
+        transform: translateY(7px);
+        color: #999;
+      }
+      /********************************************************/
+      /*                  story section                      */
+      /******************************************************/
+      .story {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .story-btn {
+        padding: 12px 24px;
+        color: #fff;
+        font-weight: bold;
+        background-image: linear-gradient(#d6336c, #be4bdb);
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+      .story-btn::before,
+      .story-btn::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .back-heart-1 {
+        height: 400px;
+        width: 400px;
+        color: #e03131;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -200;
+      }
+      .back-heart-2 {
+        height: 300px;
+        width: 300px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -100;
+      }
+      /********************************************************/
+      /*                  modal                              */
+      /******************************************************/
+      .show-modal {
+        cursor: pointer;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 11px;
+        right: 19px;
+        font-size: 30px;
+        color: #333;
+        cursor: pointer;
+        border: none;
+        background: none;
+        margin-bottom: 100px;
+      }
+      /* -------------------------- */
+      /* CLASSES TO MAKE MODAL WORK */
+      .hidden {
+        display: none;
+      }
+
+      .modal {
+        position: absolute;
+        top: 180vh;
+        left: 50%;
+        transform: translate(-50%, 40px);
+        width: 100vw;
+        height: 130vh;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        text-align: center;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 5;
+      }
+      .modal img {
+        height: 480px;
+        margin-top: 80px;
+        border-radius: 10px;
+      }
+      .right-arrow {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        font-size: 40px;
+        transform: translateY(-50%);
+        color: #495057;
+        cursor: pointer;
+      }
+      .right-arrow:visited,
+      .right-arrow:focus,
+      .left-arrow:visited,
+      .left-arrow:focus {
+        background-color: transparent;
+      }
+
+      .left-arrow {
+        position: absolute;
+        left: 0;
+        top: 30%;
+        font-size: 40px;
+        transform: translateY(-50%);
+        color: #495057;
+        cursor: pointer;
+      }
+      /********************************************************/
+      /*                  contact section                      */
+      /******************************************************/
+      .contact {
+        height: 60vh;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .contact h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: deeppink;
+        margin-bottom: 32px;
+      }
+
+      .contact .text {
+        margin-left: 0;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .contact .text p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .contact .text p:last-of-type {
+        margin-bottom: -10px;
+      }
+      .contact .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact img {
+        width: 380px;
+      }
+      .contact a {
+        text-decoration: none;
+        color: #555;
+        font-size: 18px;
+      }
+      .contact-icon {
+        color: #333;
+        transform: translate(70%, 7px);
+        width: 32px;
+        height: 32px;
+      }
+      .contact-subheading {
+        font-weight: 600;
+        color: #333;
+      }
+      .phone {
+        letter-spacing: 1px;
+      }
+      .message-box {
+        margin-top: 30px;
+        padding: 15px;
+        color: #555;
+      }
+      .message-text {
+        line-height: 1.6;
+      }
+      .salma {
+        color: deeppink;
+        font-weight: bold;
+      }
+      .for {
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <header>
+      <a
+        target="_blank"
+        href="https://www.facebook.com/profile.php?id=100032988850673"
+        class="nav-link"
+      >
+        <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+      </a>
+      <a
+        target="_blank"
+        href="https://wa.me/qr/UBB345FSELZ2G1"
+        class="nav-link"
+      >
+        <ion-icon class="social-icon" name="logo-whatsapp"></ion-icon>
+      </a>
+      <a
+        target="_blank"
+        href=" https://www.facebook.com/profile.php?id=100032988850673"
+        class="nav-link"
+      >
+        <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+      </a>
+      <a target="_blank" href="" class="nav-link">
+        <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+      </a>
+    </header>
+    <section class="hero">
+      <p class="hero-hi">Hello World.</p>
+      <p class="hero-name">I'm Mohamed Tamer.</p>
+      <p class="hero-job">A student in the Egyptian secondary education.</p>
+
+      <a href="#about" class="hero-btn">MORE</a>
+    </section>
+    <section class="about" id="about">
+      <div class="img-box">
+        <img src="images/IMG-20220505-WA0025.jpg" alt="" height="440px" />
+      </div>
+      <div class="txt-box">
+        <p class="about-txt">
+          <span class="wrap-txt">Name :</span> Mohamed Tamer
+        </p>
+        <p class="about-txt"><span class="wrap-txt">Age :</span> 17</p>
+        <p class="about-txt">
+          <span class="wrap-txt">Job :</span>Women Magnet
+          <ion-icon class="magnet" name="magnet"></ion-icon>
+        </p>
+        <p class="about-txt">
+          <span class="wrap-txt">Marital Status :</span> In love
+          <ion-icon class="heart" name="heart"></ion-icon>
+        </p>
+      </div>
+    </section>
+    <section class="story">
+      <div class="story-btn show-modal">
+        <p>SEE MY LOVE STORY</p>
+        <ion-icon class="back-heart-1" name="heart"></ion-icon>
+        <ion-icon class="back-heart-2" name="heart"></ion-icon>
+      </div>
+    </section>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+
+      <ion-icon class="right-arrow" name="chevron-forward-outline"></ion-icon>
+      <img class="modal-img" src="images/girl-1.png" alt="" />
+      <ion-icon class="left-arrow" name="chevron-back-outline"></ion-icon>
+      <div class="message-box">
+        <p class="message-text">
+          When saw her for the first time , I said that God must've been showing
+          off when He created you. Her face was like the moon in the night. I
+          listened to her heartbeat in rhythm with my own, With every pound that
+          warming sound keeps me safe with love she've shown. Just like the
+          sunshine makes the flower grow That's just the way she change my whole
+          life show Through the sunshine of her tender love.<br />
+          <br />
+          <span class="for">A message for </span
+          ><span class="salma">Salma Abozed </span><br />
+          You're the captain and crew; You will always be my necessity— I'd be
+          lost without you. You have bewitched me, body and soul, and I love, I
+          love, I love you. I never wish to be parted from you from this day on.
+        </p>
+      </div>
+    </div>
+
+    <section class="contact">
+      <h2>CONTACT ME</h2>
+      <div class="contact-container">
+        <div class="text">
+          <p class="contact-subheading">feel free to drop me a line at:</p>
+          <br />
+          <a
+            style="margin-bottom: 15px; display: block"
+            class="gmail"
+            href="mailto:ghmohamed499@gmail.com"
+            >ghmohamed499@gmail.com</a
+          >
+          <p class="contact-subheading">CALL ME:</p>
+          <br />
+          <a class="gmail phone" href="tel:01011047689"
+            >01011047689
+            <ion-icon class="contact-icon" name="person-add-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="img">
+          <img loading="lazy" src="images/contact.svg" alt="svg" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      "use strict";
+
+      /* select the hidden items then remove the hidden class */
+      const modal = document.querySelector(".modal");
+      const overlay = document.querySelector(".overlay");
+      const btnCloseModel = document.querySelector(".close-modal");
+      const btnsOpenModel = document.querySelectorAll(".show-modal");
+      // that will create node list (like array) with all the items that have that class and then you can iterate through that array
+
+      const closeModel = function () {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+      };
+
+      const openModal = function () {
+        modal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      };
+
+      for (let i = 0; i < btnsOpenModel.length; i++) {
+        btnsOpenModel[i].addEventListener("click", openModal);
+      }
+      // remove the hidden class
+
+      btnCloseModel.addEventListener("click", closeModel);
+
+      overlay.addEventListener("click", closeModel);
+
+      //**** the slider
+
+      let imageCounter = 1;
+
+      const rightArrow = document.querySelector(".right-arrow");
+      const leftArrow = document.querySelector(".left-arrow");
+      const modalImg = document.querySelector(".modal-img");
+
+      rightArrow.addEventListener("click", function () {
+        if (imageCounter > 0 && imageCounter < 11) {
+          imageCounter++;
+          modalImg.src = `images/girl-${imageCounter}.png`;
+        }
+      });
+      leftArrow.addEventListener("click", function () {
+        if (imageCounter > 1 && imageCounter < 12) {
+          imageCounter--;
+          modalImg.src = `images/girl-${imageCounter}.png`;
+        }
+      });
+    </script>
+  </body>
+</html>
